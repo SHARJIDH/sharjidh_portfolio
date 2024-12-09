@@ -3,7 +3,9 @@ import { ExternalLink, Github } from "lucide-react";
 import ContentMatrixPng from "../assets/ContentMatrix.jpg";
 import RoadMapsPng from "../assets/block-builder.jpg";
 import SocialConnectPng from "../assets/Social-Air.jpg";
-
+import AntennaDiversity from "../assets/AntennaDiversity.jpg";
+import ClipFusion from "../assets/ClipFusion.jpg";
+import SusDev from "../assets/SusDev.jpg";
 
 interface Project {
   id: number;
@@ -18,28 +20,54 @@ const projects: Project[] = [
   {
     id: 1,
     title: "ContentMatrix",
-    description:
-      "A place where you can get content for any kind of work.",
+    description: "A place where you can get content for any kind of work.",
     imageUrl: ContentMatrixPng,
     sourceCodeUrl: "https://github.com/SHARJIDH/ContentMatrix",
     demoUrl: "https://content-matrix-sharjidhs-projects.vercel.app/",
   },
   {
     id: 2,
+    title: "ClipFusion",
+    description: "Edit your vedios and images using Ai.",
+    imageUrl: ClipFusion,
+    sourceCodeUrl: "https://github.com/SHARJIDH/ClipFusion",
+    demoUrl: "https://clip-fusion.vercel.app/",
+  },
+
+  {
+    id: 3,
     title: "Document and BlockBuilder Platform",
-    description:
-      "A roadmap and docs platform for your projects.",
+    description: "A roadmap and docs platform for your projects.",
     imageUrl: RoadMapsPng,
     sourceCodeUrl: "https://github.com/SHARJIDH/BlockBuider",
     demoUrl: "https://block-buider.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
+    title: "SusDev",
+    description:
+      "A place where you can get generate environmental firnedly reciepes using ai and also vedios",
+    imageUrl: SusDev,
+    sourceCodeUrl: "https://github.com/SHARJIDH/SusDev",
+    demoUrl: "https://sus-dev.vercel.app/",
+  },
+  {
+    id: 5,
     title: "Social Media App",
-    description: "A feature-rich social media platform for group communication and collaboration.",
+    description:
+      "A feature-rich social media platform for group communication and collaboration.",
     imageUrl: SocialConnectPng,
     sourceCodeUrl: "https://github.com/SHARJIDH/SocialAir",
     demoUrl: "https://social-air.vercel.app",
+  },
+  {
+    id: 6,
+    title: "wireless-communication bpsk",
+    imageUrl: AntennaDiversity,
+    description:
+      "A feature-rich social media platform for group communication and collaboration.",
+    sourceCodeUrl: "https://github.com/SHARJIDH/antenna-simulations",
+    demoUrl: "https://group5-wireless.vercel.app/",
   },
 ];
 
