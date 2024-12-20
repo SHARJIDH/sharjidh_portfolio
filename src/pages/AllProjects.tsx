@@ -6,6 +6,8 @@ import SocialConnectPng from "../assets/Social-Air.jpg";
 import AntennaDiversity from "../assets/AntennaDiversity.jpg";
 import ClipFusion from "../assets/ClipFusion.jpg";
 import SusDev from "../assets/SusDev.jpg";
+import WebGen from "../assets/WebGen.jpg"
+import AiMatrix from "../assets/AIMatrix.jpg"
 
 interface Project {
   id: number;
@@ -19,21 +21,20 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "ContentMatrix",
-    description: "A place where you can get content for any kind of work.",
-    imageUrl: ContentMatrixPng,
-    sourceCodeUrl: "https://github.com/SHARJIDH/ContentMatrix",
-    demoUrl: "https://content-matrix-sharjidhs-projects.vercel.app/",
+    title: "WebGen",
+    description: "A place where you generate website with prompts within seconds.",
+    imageUrl: WebGen,
+    sourceCodeUrl: "https://github.com/SHARJIDH/WebGen.git",
+    demoUrl: "https://web-gen-five.vercel.app/",
   },
   {
     id: 2,
-    title: "ClipFusion",
-    description: "Edit your vedios and images using Ai.",
-    imageUrl: ClipFusion,
-    sourceCodeUrl: "https://github.com/SHARJIDH/ClipFusion",
-    demoUrl: "https://clip-fusion.vercel.app/",
+    title: "AiMatrix",
+    description: "A place where you can get all the information you want in seconds",
+    imageUrl: AiMatrix,
+    sourceCodeUrl: "https://github.com/SHARJIDH/AiMatrix.git",
+    demoUrl: "https://ai-matrix-phi.vercel.app/",
   },
-
   {
     id: 3,
     title: "Document and BlockBuilder Platform",
@@ -44,6 +45,24 @@ const projects: Project[] = [
   },
   {
     id: 4,
+    title: "ClipFusion",
+    description: "Edit your vedios and images using Ai.",
+    imageUrl: ClipFusion,
+    sourceCodeUrl: "https://github.com/SHARJIDH/ClipFusion",
+    demoUrl: "https://clip-fusion.vercel.app/",
+  },
+
+  {
+    id: 5,
+    title: "ContentMatrix",
+    description: "A place where you can get content for any kind of work.",
+    imageUrl: ContentMatrixPng,
+    sourceCodeUrl: "https://github.com/SHARJIDH/ContentMatrix",
+    demoUrl: "https://content-matrix-sharjidhs-projects.vercel.app/",
+
+  },
+  {
+    id: 6,
     title: "SusDev",
     description:
       "A place where you can get generate environmental firnedly reciepes using ai and also vedios",
@@ -52,7 +71,7 @@ const projects: Project[] = [
     demoUrl: "https://sus-dev.vercel.app/",
   },
   {
-    id: 5,
+    id: 7,
     title: "Social Media App",
     description:
       "A feature-rich social media platform for group communication and collaboration.",
@@ -61,7 +80,7 @@ const projects: Project[] = [
     demoUrl: "https://social-air.vercel.app",
   },
   {
-    id: 6,
+    id: 8,
     title: "wireless-communication bpsk",
     imageUrl: AntennaDiversity,
     description:
