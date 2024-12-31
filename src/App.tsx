@@ -32,7 +32,7 @@ const LoadingScreen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLanguage((prev) => (prev + 1) % languages.length);
-    }, 350);
+    }, 300);
 
     return () => clearInterval(interval);
   }, []);
@@ -41,7 +41,9 @@ const LoadingScreen = () => {
     <div className="fixed inset-0 bg-black flex items-center justify-center">
       <div className="flex flex-col items-center mb-4">
         <span className="text-white text-4xl mb-4">🙏</span>
-        <h1 className="text-white text-4xl font-bold">{languages[currentLanguage]}</h1>
+        <h1 className="text-white text-4xl font-bold">
+          {languages[currentLanguage]}
+        </h1>
       </div>
     </div>
   );
@@ -66,7 +68,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4500); // Increased from 3000 to 5000 to allow more time for all languages
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
