@@ -67,16 +67,33 @@ function About() {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            className="mb-4  rounded-lg shadow-md p-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            className="mb-4 rounded-lg shadow-md p-4 bg-white hover:shadow-lg transition-all duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+              type: "spring",
+              stiffness: 100
+            }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 10px 20px rgba(0,0,0,0.1)"
+            }}
           >
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleExperience(exp.company)}
             >
-              <h3 className="text-xl font-semibold">{exp.company}</h3>
+              <motion.h3 
+                className="text-xl font-semibold text-[#ff8c00]"
+                initial={{ x: -20 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {exp.company}
+              </motion.h3>
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -87,33 +104,72 @@ function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                animate={{ rotate: expandedExperience === exp.company ? 180 : 0 }}
+                animate={{ 
+                  rotate: expandedExperience === exp.company ? 180 : 0,
+                  color: expandedExperience === exp.company ? "#ff8c00" : "#000000"
+                }}
+                transition={{ duration: 0.3 }}
               >
                 <polyline points="6 9 12 15 18 9"></polyline>
               </motion.svg>
             </div>
-            <p className="text-gray-600">{exp.position}</p>
-            <p className="text-gray-500">{exp.duration} | {exp.location}</p>
+            <motion.p 
+              className="text-gray-600"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {exp.position}
+            </motion.p>
+            <motion.p 
+              className="text-gray-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              {exp.duration} | {exp.location}
+            </motion.p>
             {expandedExperience === exp.company && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ 
+                  duration: 0.3,
+                  type: "spring",
+                  stiffness: 100
+                }}
               >
                 <ul className="list-disc list-inside mt-2">
                   {exp.description.map((item, i) => (
-                    <li key={i} className="text-gray-600 mt-1">{item}</li>
+                    <motion.li
+                      key={i}
+                      className="text-gray-600 mt-1"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ 
+                        delay: i * 0.1,
+                        type: "spring",
+                        stiffness: 120
+                      }}
+                      whileHover={{ x: 10 }}
+                    >
+                      {item}
+                    </motion.li>
                   ))}
                 </ul>
-                <p className="text-gray-600 mt-2">
+                <motion.p
+                  className="text-gray-600 mt-2"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
                   <strong>Tools used:</strong> {exp.tools}
-                </p>
+                </motion.p>
               </motion.div>
             )}
           </motion.div>
         ))}
-
       </div>
     </div>
   );
